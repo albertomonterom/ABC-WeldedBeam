@@ -1,0 +1,288 @@
+============================================================
+EJECUTANDO: Análisis estadístico
+============================================================
+Datos cargados: 7290 ejecuciones totales
+Soluciones factibles: 7276 ejecuciones
+Resultados del análisis se guardarán en: analisis/analisis_20250622_0326
+INICIANDO ANÁLISIS ESTADÍSTICO COMPLETO
+================================================================================
+
+================================================================================
+PASO 2: ANÁLISIS EXPLORATORIO Y VISUALIZACIÓN
+================================================================================
+Generando estadísticas descriptivas...
+
+TOP 10 MEJORES COMBINACIONES (por media):
+------------------------------------------------------------
+                                                 count  ...       max
+numb_bees max_itrs p_f  limit modification_rate         ...
+150       1000     0.75 10    0.9                   30  ...  3.006214
+450       1000     0.75 50    0.9                   30  ...  2.805461
+                        10    0.9                   30  ...  2.805461
+                        150   0.9                   30  ...  2.805461
+150       1000     0.75 150   0.9                   30  ...  2.863714
+450       1000     0.45 150   0.9                   30  ...  2.957882
+50        1000     0.75 10    0.9                   30  ...  2.942955
+150       1000     0.75 50    0.9                   30  ...  3.214989
+450       1000     0.45 10    0.9                   30  ...  3.098332
+                        50    0.9                   30  ...  3.098332
+
+[10 rows x 6 columns]
+
+Estadísticas por parámetro individual:
+
+NUMB_BEES:
+           count      mean    median       std       min        max
+numb_bees
+50          2416  3.414013  3.266348  0.852577  1.801762  12.817831
+150         2430  3.169764  3.057345  0.608436  1.872344   5.445365
+450         2430  2.877977  2.864614  0.465047  1.807626   4.749784
+
+MAX_ITRS:
+          count      mean    median       std       min        max
+max_itrs
+100        2417  3.549600  3.468527  0.833219  1.981951  12.817831
+500        2429  3.066741  2.987193  0.546064  1.872344   6.547518
+1000       2430  2.845995  2.819382  0.453903  1.801762   5.400866
+
+P_F:
+      count      mean    median       std       min        max
+p_f
+0.25   2421  3.323619  3.145595  0.766741  1.850300  12.817831
+0.45   2426  3.119965  2.982686  0.666850  1.807626   8.080795
+0.75   2429  3.017187  2.927902  0.612217  1.801762   7.855510
+
+LIMIT:
+       count      mean    median       std       min        max
+limit
+10      2430  3.046091  2.962630  0.575758  1.801762   5.833140
+50      2427  3.158476  3.029431  0.716094  1.880103  12.817831
+150     2419  3.256156  3.080599  0.768004  1.807626  12.817831
+
+MODIFICATION_RATE:
+                   count      mean    median       std       min        max
+modification_rate
+0.1                 2430  3.269089  3.166809  0.566994  1.801762   6.915238
+0.5                 2425  3.171173  3.022957  0.687903  1.872344   7.725309
+0.9                 2421  3.019530  2.854301  0.793677  1.807626  12.817831
+Generando diagramas de caja...
+Generando histogramas...
+
+================================================================================
+PASO 3: VERIFICACIÓN DE SUPUESTOS DEL ANOVA
+================================================================================
+1. VERIFICANDO NORMALIDAD DE RESIDUOS
+----------------------------------------
+Muestra muy grande para Shapiro-Wilk, usando Kolmogorov-Smirnov...
+Prueba de Kolmogorov-Smirnov:
+  Estadístico: 0.162626
+  p-valor: 0.000000
+  Normalidad: NO (α = 0.05)
+
+2. VERIFICANDO HOMOGENEIDAD DE VARIANZAS
+----------------------------------------
+Prueba de Levene:
+  Estadístico: 5.877137
+  p-valor: 0.000000
+  Homogeneidad: NO (α = 0.05)
+
+============================================================
+RESUMEN DE SUPUESTOS:
+============================================================
+Normalidad de residuos: ✗
+Homogeneidad de varianzas: ✗
+
+RECOMENDACIÓN: Análisis No Paramétrico
+============================================================
+
+================================================================================
+PASO 4B: ANÁLISIS NO PARAMÉTRICO
+================================================================================
+PRUEBAS DE KRUSKAL-WALLIS POR PARÁMETRO:
+--------------------------------------------------
+numb_bees:
+  Niveles analizados: [50, 150, 450]
+  Tamaños de grupos: [2416, 2430, 2430]
+  Estadístico H: 676.991624
+  p-valor: 0.000000
+  Significativo: SÍ (α = 0.05)
+
+max_itrs:
+  Niveles analizados: [100, 500, 1000]
+  Tamaños de grupos: [2417, 2429, 2430]
+  Estadístico H: 1262.621101
+  p-valor: 0.000000
+  Significativo: SÍ (α = 0.05)
+
+p_f:
+  Niveles analizados: [0.25, 0.45, 0.75]
+  Tamaños de grupos: [2421, 2426, 2429]
+  Estadístico H: 269.196759
+  p-valor: 0.000000
+  Significativo: SÍ (α = 0.05)
+
+limit:
+  Niveles analizados: [10, 50, 150]
+  Tamaños de grupos: [2430, 2427, 2419]
+  Estadístico H: 86.795415
+  p-valor: 0.000000
+  Significativo: SÍ (α = 0.05)
+
+modification_rate:
+  Niveles analizados: [0.1, 0.5, 0.9]
+  Tamaños de grupos: [2430, 2425, 2421]
+  Estadístico H: 363.796115
+  p-valor: 0.000000
+  Significativo: SÍ (α = 0.05)
+
+
+PRUEBAS POST-HOC (DUNN):
+------------------------------
+
+NUMB_BEES:
+Tamaños de grupos: {'150': np.int64(2430), '450': np.int64(2430), '50': np.int64(2416)}
+Ejecutando prueba de Dunn con 7276 observaciones en 3 grupos...
+Resultados de la prueba de Dunn:
+              150            450             50
+150  1.000000e+00   2.755713e-61   2.916939e-19
+450  2.755713e-61   1.000000e+00  1.222163e-144
+50   2.916939e-19  1.222163e-144   1.000000e+00
+
+Comparaciones significativas (p < 0.05) para numb_bees:
+  • 150 vs 450: p = 0.000000
+  • 150 vs 50: p = 0.000000
+  • 450 vs 150: p = 0.000000
+  • 450 vs 50: p = 0.000000
+  • 50 vs 150: p = 0.000000
+  • 50 vs 450: p = 0.000000
+
+MAX_ITRS:
+Tamaños de grupos: {'1000': np.int64(2430), '500': np.int64(2429), '100': np.int64(2417)}
+Ejecutando prueba de Dunn con 7276 observaciones en 3 grupos...
+Resultados de la prueba de Dunn:
+                100           1000            500
+100    1.000000e+00  6.280161e-271  2.102580e-105
+1000  6.280161e-271   1.000000e+00   3.179598e-40
+500   2.102580e-105   3.179598e-40   1.000000e+00
+
+Comparaciones significativas (p < 0.05) para max_itrs:
+  • 100 vs 1000: p = 0.000000
+  • 100 vs 500: p = 0.000000
+  • 1000 vs 100: p = 0.000000
+  • 1000 vs 500: p = 0.000000
+  • 500 vs 100: p = 0.000000
+  • 500 vs 1000: p = 0.000000
+
+P_F:
+Tamaños de grupos: {'0.75': np.int64(2429), '0.45': np.int64(2426), '0.25': np.int64(2421)}
+Ejecutando prueba de Dunn con 7276 observaciones en 3 grupos...
+Resultados de la prueba de Dunn:
+              0.25          0.45          0.75
+0.25  1.000000e+00  9.603810e-27  7.986543e-58
+0.45  9.603810e-27  1.000000e+00  3.667462e-07
+0.75  7.986543e-58  3.667462e-07  1.000000e+00
+
+Comparaciones significativas (p < 0.05) para p_f:
+  • 0.25 vs 0.45: p = 0.000000
+  • 0.25 vs 0.75: p = 0.000000
+  • 0.45 vs 0.25: p = 0.000000
+  • 0.45 vs 0.75: p = 0.000000
+  • 0.75 vs 0.25: p = 0.000000
+  • 0.75 vs 0.45: p = 0.000000
+
+LIMIT:
+Tamaños de grupos: {'10': np.int64(2430), '50': np.int64(2427), '150': np.int64(2419)}
+Ejecutando prueba de Dunn con 7276 observaciones en 3 grupos...
+Resultados de la prueba de Dunn:
+               10           150        50
+10   1.000000e+00  3.785801e-20  0.000003
+150  3.785801e-20  1.000000e+00  0.000033
+50   2.672725e-06  3.251209e-05  1.000000
+
+Comparaciones significativas (p < 0.05) para limit:
+  • 10 vs 150: p = 0.000000
+  • 10 vs 50: p = 0.000003
+  • 150 vs 10: p = 0.000000
+  • 150 vs 50: p = 0.000033
+  • 50 vs 10: p = 0.000003
+  • 50 vs 150: p = 0.000033
+
+MODIFICATION_RATE:
+Tamaños de grupos: {'0.1': np.int64(2430), '0.5': np.int64(2425), '0.9': np.int64(2421)}
+Ejecutando prueba de Dunn con 7276 observaciones en 3 grupos...
+Resultados de la prueba de Dunn:
+              0.1           0.5           0.9
+0.1  1.000000e+00  1.527239e-17  2.060775e-80
+0.5  1.527239e-17  1.000000e+00  7.873224e-25
+0.9  2.060775e-80  7.873224e-25  1.000000e+00
+
+Comparaciones significativas (p < 0.05) para modification_rate:
+  • 0.1 vs 0.5: p = 0.000000
+  • 0.1 vs 0.9: p = 0.000000
+  • 0.5 vs 0.1: p = 0.000000
+  • 0.5 vs 0.9: p = 0.000000
+  • 0.9 vs 0.1: p = 0.000000
+  • 0.9 vs 0.5: p = 0.000000
+
+================================================================================
+PASO 5: ANÁLISIS DE INTERACCIONES
+================================================================================
+Generando gráficos de interacciones...
+
+================================================================================
+PASO 6: CONCLUSIONES Y RECOMENDACIONES
+================================================================================
+ANÁLISIS ESTADÍSTICO COMPLETO - ALGORITMO ABC
+============================================================
+
+1. PARÁMETROS MÁS INFLUYENTES:
+-----------------------------------
+   • numb_bees
+   • max_itrs
+   • p_f
+   • limit
+   • modification_rate
+
+2. MEJOR CONFIGURACIÓN ENCONTRADA:
+-------------------------------------
+   • Fitness: 1.801762
+   • numb_bees: 50
+   • max_itrs: 1000
+   • p_f: 0.75
+   • limit: 10
+   • modification_rate: 0.1
+
+3. VARIABLES DE DISEÑO (MEJOR SOLUCIÓN):
+------------------------------------------
+   • x1 (altura soldadura): 0.1918
+   • x2 (longitud soldadura): 3.9510
+   • x3 (altura barra): 8.8788
+   • x4 (espesor barra): 0.2140
+
+4. RECOMENDACIONES FINALES:
+----------------------------
+   • numb_bees: 450 (valor más frecuente en top 10%)
+   • max_itrs: 1000 (valor más frecuente en top 10%)
+   • p_f: 0.75 (valor más frecuente en top 10%)
+   • limit: 10 (valor más frecuente en top 10%)
+   • modification_rate: 0.9 (valor más frecuente en top 10%)
+
+5. RESUMEN ESTADÍSTICO:
+-----------------------
+   • Total ejecuciones: 7290
+   • Soluciones factibles: 7276 (99.8%)
+   • Mejor fitness global: 1.801762
+   • Fitness promedio: 3.153417
+
+
+Análisis completo guardado en: analisis/analisis_20250622_0326
+
+================================================================================
+ANÁLISIS ESTADÍSTICO COMPLETADO EXITOSAMENTE
+================================================================================
+
+✅ Análisis estadístico completado exitosamente
+
+📊 Análisis estadístico completado exitosamente!
+Busca la carpeta 'analisis/' para los resultados.
+

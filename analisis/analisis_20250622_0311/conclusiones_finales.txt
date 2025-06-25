@@ -1,0 +1,41 @@
+ANÁLISIS ESTADÍSTICO COMPLETO - ALGORITMO ABC
+============================================================
+
+1. PARÁMETROS MÁS INFLUYENTES:
+-----------------------------------
+   • numb_bees
+   • max_itrs
+   • p_f
+   • limit
+   • modification_rate
+
+2. MEJOR CONFIGURACIÓN ENCONTRADA:
+-------------------------------------
+   • Fitness: 1.801762
+   • numb_bees: 50
+   • max_itrs: 1000
+   • p_f: 0.75
+   • limit: 10
+   • modification_rate: 0.1
+
+3. VARIABLES DE DISEÑO (MEJOR SOLUCIÓN):
+------------------------------------------
+   • x1 (altura soldadura): 0.1918
+   • x2 (longitud soldadura): 3.9510
+   • x3 (altura barra): 8.8788
+   • x4 (espesor barra): 0.2140
+
+4. RECOMENDACIONES FINALES:
+----------------------------
+   • numb_bees: 450 (valor más frecuente en top 10%)
+   • max_itrs: 1000 (valor más frecuente en top 10%)
+   • p_f: 0.75 (valor más frecuente en top 10%)
+   • limit: 10 (valor más frecuente en top 10%)
+   • modification_rate: 0.9 (valor más frecuente en top 10%)
+
+5. RESUMEN ESTADÍSTICO:
+-----------------------
+   • Total ejecuciones: 7290
+   • Soluciones factibles: 7276 (99.8%)
+   • Mejor fitness global: 1.801762
+   • Fitness promedio: 3.153417

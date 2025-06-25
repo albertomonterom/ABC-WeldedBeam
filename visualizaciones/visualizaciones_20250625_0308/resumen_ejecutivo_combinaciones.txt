@@ -1,0 +1,63 @@
+================================================================================
+RESUMEN EJECUTIVO - ANÁLISIS DE TODAS LAS COMBINACIONES
+================================================================================
+
+📊 ESTADÍSTICAS GENERALES
+----------------------------------------
+Total de combinaciones analizadas: 243
+Combinaciones con soluciones factibles: 243
+Porcentaje de éxito: 100.0%
+
+🏆 TOP 10 MEJORES COMBINACIONES
+----------------------------------------
+Rank  ID           Fitness      Abejas   Iters    p_f    Limit    ModRate  Factibles 
+--------------------------------------------------------------------------------
+1     155          2.416935     150      1000     0.75   10       0.9      30        
+2     242          2.420871     450      1000     0.75   150      0.9      30        
+3     239          2.420871     450      1000     0.75   50       0.9      30        
+4     236          2.420871     450      1000     0.75   10       0.9      30        
+5     161          2.432243     150      1000     0.75   150      0.9      30        
+6     233          2.451248     450      1000     0.45   150      0.9      30        
+7     74           2.476299     50       1000     0.75   10       0.9      30        
+8     158          2.497831     150      1000     0.75   50       0.9      30        
+9     227          2.497896     450      1000     0.45   10       0.9      30        
+10    230          2.497896     450      1000     0.45   50       0.9      30        
+
+📈 ANÁLISIS POR PARÁMETROS
+----------------------------------------
+numb_bees:
+  • Mejor nivel: 450.0 (fitness promedio: 2.877977)
+  • Configuraciones con este nivel: 81.0
+max_itrs:
+  • Mejor nivel: 1000.0 (fitness promedio: 2.845995)
+  • Configuraciones con este nivel: 81.0
+p_f:
+  • Mejor nivel: 0.75 (fitness promedio: 3.017658)
+  • Configuraciones con este nivel: 81.0
+limit:
+  • Mejor nivel: 10.0 (fitness promedio: 3.046091)
+  • Configuraciones con este nivel: 81.0
+modification_rate:
+  • Mejor nivel: 0.9 (fitness promedio: 3.025486)
+  • Configuraciones con este nivel: 81.0
+
+✅ ANÁLISIS DE FACTIBILIDAD
+----------------------------------------
+Tasa de factibilidad promedio: 99.8% ± 1.2%
+Mejor tasa de factibilidad: 100.0%
+Peor tasa de factibilidad: 90.0%
+
+🎯 RECOMENDACIONES
+----------------------------------------
+Configuración recomendada (mejor fitness promedio):
+  • Número de abejas: 150
+  • Iteraciones máximas: 1000
+  • Probabilidad p_f: 0.75
+  • Límite: 10
+  • Modification rate: 0.9
+  • Fitness esperado: 2.416935 ± 0.308396
+  • Tasa de factibilidad: 100.0%
+
+================================================================================
+Archivo generado: 2025-06-25 03:09:11
+================================================================================

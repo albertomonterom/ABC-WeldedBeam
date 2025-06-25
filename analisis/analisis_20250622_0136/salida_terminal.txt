@@ -1,0 +1,283 @@
+============================================================
+EJECUTANDO: Experimentos completos
+============================================================
+================================================================================
+INICIANDO EXPERIMENTO COMPLETO - ANÁLISIS DE PARÁMETROS ABC
+================================================================================
+Carpeta de resultados: resultados/experimento_20250621_1412
+Total de combinaciones de parámetros: 243
+Repeticiones por combinación: 30
+Total de ejecuciones: 7290
+
+============================================================
+CONFIGURACIÓN DE PROCESAMIENTO
+============================================================
+Cores/procesadores disponibles: 24
+Recomendaciones:
+  • Uso ligero: 6 cores (75% disponible para otras tareas)
+  • Uso moderado: 12 cores (50% disponible)
+  • Uso intensivo: 23 cores (máximo rendimiento)
+  • Uso máximo: 24 cores (100% del sistema)
+
+Selecciona número de cores a usar (1-24) o 'auto' para automático: 22
+
+Configuración seleccionada: 22 cores
+Tiempo estimado: ~8m
+¿Continuar con esta configuración? (s/N): s
+Procesadores a utilizar: 22/24
+Tiempo estimado: ~8m
+================================================================================
+Iniciando ejecución paralela...
+Procesando experimentos: 100%|██| 7290/7290 [11:24:06<00:00,  5.63s/exp] , Factibles=99.8%, ETA=0.0m
+
+================================================================================
+EXPERIMENTO COMPLETADO
+================================================================================
+Resultados guardados en: resultados/experimento_20250621_1412/master_table.csv
+Total de filas en master_table: 7290
+Tiempo total de ejecución: 11.40 horas (684.1 minutos)
+Soluciones factibles encontradas: 7276/7290 (99.8%)
+Mejor fitness encontrado: 1.801761544556665
+Eficiencia de procesamiento: 0.2 experimentos/segundo
+================================================================================
+
+Resumen por combinación (Top 10 mejores):
+--------------------------------------------------
+/mnt/4a20b8f8-51bb-4729-9139-6c1a626aa7f3/Documentos/Aprender/Escuela/Universidad/5° Semestre/5. AB (Algoritmos Bioinspirados)/Proyecto_final/venv/lib/python3.13/site-packages/pandas/core/internals/blocks.py:1986: RuntimeWarning: overflow encountered in multiply
+  values = self.values.round(decimals)  # type: ignore[union-attr]
+                fitness_mean  fitness_std  fitness_min  factibles  tiempo_mean
+id_combinacion
+155                   2.4169       0.3084       1.8955         30      43.4936
+242                   2.4209       0.2187       1.9557         30     559.3132
+239                   2.4209       0.2187       1.9557         30     617.2365
+236                   2.4209       0.2187       1.9557         30     612.4961
+161                   2.4322       0.2422       2.0137         30      43.4321
+233                   2.4512       0.3004       1.8076         30     622.0000
+74                    2.4763       0.2703       1.9862         30       6.6955
+158                   2.4978       0.3324       1.9702         30      43.5384
+227                   2.4979       0.3353       1.8889         30     650.3064
+230                   2.4979       0.3353       1.8889         30     620.0048
+
+Todos los resultados guardados en: resultados/experimento_20250621_1412
+
+✅ Experimentos completos completado exitosamente
+
+📊 Paso 3/4: Ejecutando análisis estadístico...
+
+============================================================
+EJECUTANDO: Análisis estadístico
+============================================================
+Datos cargados: 7290 ejecuciones totales
+Soluciones factibles: 7276 ejecuciones
+Resultados del análisis se guardarán en: analisis/analisis_20250622_0136
+INICIANDO ANÁLISIS ESTADÍSTICO COMPLETO
+================================================================================
+
+================================================================================
+PASO 2: ANÁLISIS EXPLORATORIO Y VISUALIZACIÓN
+================================================================================
+Generando estadísticas descriptivas...
+
+TOP 10 MEJORES COMBINACIONES (por media):
+------------------------------------------------------------
+                                                 count  ...       max
+numb_bees max_itrs p_f  limit modification_rate         ...
+150       1000     0.75 10    0.9                   30  ...  3.006214
+450       1000     0.75 50    0.9                   30  ...  2.805461
+                        10    0.9                   30  ...  2.805461
+                        150   0.9                   30  ...  2.805461
+150       1000     0.75 150   0.9                   30  ...  2.863714
+450       1000     0.45 150   0.9                   30  ...  2.957882
+50        1000     0.75 10    0.9                   30  ...  2.942955
+150       1000     0.75 50    0.9                   30  ...  3.214989
+450       1000     0.45 10    0.9                   30  ...  3.098332
+                        50    0.9                   30  ...  3.098332
+
+[10 rows x 6 columns]
+
+Estadísticas por parámetro individual:
+
+NUMB_BEES:
+           count      mean    median       std       min        max
+numb_bees
+50          2416  3.414013  3.266348  0.852577  1.801762  12.817831
+150         2430  3.169764  3.057345  0.608436  1.872344   5.445365
+450         2430  2.877977  2.864614  0.465047  1.807626   4.749784
+
+MAX_ITRS:
+          count      mean    median       std       min        max
+max_itrs
+100        2417  3.549600  3.468527  0.833219  1.981951  12.817831
+500        2429  3.066741  2.987193  0.546064  1.872344   6.547518
+1000       2430  2.845995  2.819382  0.453903  1.801762   5.400866
+
+P_F:
+      count      mean    median       std       min        max
+p_f
+0.25   2421  3.323619  3.145595  0.766741  1.850300  12.817831
+0.45   2426  3.119965  2.982686  0.666850  1.807626   8.080795
+0.75   2429  3.017187  2.927902  0.612217  1.801762   7.855510
+
+LIMIT:
+       count      mean    median       std       min        max
+limit
+10      2430  3.046091  2.962630  0.575758  1.801762   5.833140
+50      2427  3.158476  3.029431  0.716094  1.880103  12.817831
+150     2419  3.256156  3.080599  0.768004  1.807626  12.817831
+
+MODIFICATION_RATE:
+                   count      mean    median       std       min        max
+modification_rate
+0.1                 2430  3.269089  3.166809  0.566994  1.801762   6.915238
+0.5                 2425  3.171173  3.022957  0.687903  1.872344   7.725309
+0.9                 2421  3.019530  2.854301  0.793677  1.807626  12.817831
+Generando diagramas de caja...
+Generando histogramas...
+
+================================================================================
+PASO 3: VERIFICACIÓN DE SUPUESTOS DEL ANOVA
+================================================================================
+1. VERIFICANDO NORMALIDAD DE RESIDUOS
+----------------------------------------
+Muestra muy grande para Shapiro-Wilk, usando Kolmogorov-Smirnov...
+Prueba de Kolmogorov-Smirnov:
+  Estadístico: 0.162626
+  p-valor: 0.000000
+  Normalidad: NO (α = 0.05)
+
+2. VERIFICANDO HOMOGENEIDAD DE VARIANZAS
+----------------------------------------
+Prueba de Levene:
+  Estadístico: 5.877137
+  p-valor: 0.000000
+  Homogeneidad: NO (α = 0.05)
+
+============================================================
+RESUMEN DE SUPUESTOS:
+============================================================
+Normalidad de residuos: ✗
+Homogeneidad de varianzas: ✗
+
+RECOMENDACIÓN: Análisis No Paramétrico
+============================================================
+
+================================================================================
+PASO 4B: ANÁLISIS NO PARAMÉTRICO
+================================================================================
+PRUEBAS DE KRUSKAL-WALLIS POR PARÁMETRO:
+--------------------------------------------------
+numb_bees:
+  Estadístico H: 676.991624
+  p-valor: 0.000000
+  Significativo: SÍ (α = 0.05)
+
+max_itrs:
+  Estadístico H: 1262.621101
+  p-valor: 0.000000
+  Significativo: SÍ (α = 0.05)
+
+p_f:
+  Estadístico H: 269.196759
+  p-valor: 0.000000
+  Significativo: SÍ (α = 0.05)
+
+limit:
+  Estadístico H: 86.795415
+  p-valor: 0.000000
+  Significativo: SÍ (α = 0.05)
+
+modification_rate:
+  Estadístico H: 363.796115
+  p-valor: 0.000000
+  Significativo: SÍ (α = 0.05)
+
+
+PRUEBAS POST-HOC (DUNN):
+------------------------------
+
+NUMB_BEES:
+Error en prueba de Dunn para numb_bees: object of type 'numpy.float64' has no len()
+
+MAX_ITRS:
+Error en prueba de Dunn para max_itrs: object of type 'numpy.float64' has no len()
+
+P_F:
+Error en prueba de Dunn para p_f: object of type 'numpy.float64' has no len()
+
+LIMIT:
+Error en prueba de Dunn para limit: object of type 'numpy.float64' has no len()
+
+MODIFICATION_RATE:
+Error en prueba de Dunn para modification_rate: object of type 'numpy.float64' has no len()
+
+================================================================================
+PASO 5: ANÁLISIS DE INTERACCIONES
+================================================================================
+Generando gráficos de interacciones...
+
+================================================================================
+PASO 6: CONCLUSIONES Y RECOMENDACIONES
+================================================================================
+ANÁLISIS ESTADÍSTICO COMPLETO - ALGORITMO ABC
+============================================================
+
+1. PARÁMETROS MÁS INFLUYENTES:
+-----------------------------------
+   • numb_bees
+   • max_itrs
+   • p_f
+   • limit
+   • modification_rate
+
+2. MEJOR CONFIGURACIÓN ENCONTRADA:
+-------------------------------------
+   • Fitness: 1.801762
+   • numb_bees: 50
+   • max_itrs: 1000
+   • p_f: 0.75
+   • limit: 10
+   • modification_rate: 0.1
+
+3. VARIABLES DE DISEÑO (MEJOR SOLUCIÓN):
+------------------------------------------
+   • x1 (altura soldadura): 0.1918
+   • x2 (longitud soldadura): 3.9510
+   • x3 (altura barra): 8.8788
+   • x4 (espesor barra): 0.2140
+
+4. RECOMENDACIONES FINALES:
+----------------------------
+   • numb_bees: 450 (valor más frecuente en top 10%)
+   • max_itrs: 1000 (valor más frecuente en top 10%)
+   • p_f: 0.75 (valor más frecuente en top 10%)
+   • limit: 10 (valor más frecuente en top 10%)
+   • modification_rate: 0.9 (valor más frecuente en top 10%)
+
+5. RESUMEN ESTADÍSTICO:
+-----------------------
+   • Total ejecuciones: 7290
+   • Soluciones factibles: 7276 (99.8%)
+   • Mejor fitness global: 1.801762
+   • Fitness promedio: 3.153417
+
+
+Análisis completo guardado en: analisis/analisis_20250622_0136
+
+================================================================================
+ANÁLISIS ESTADÍSTICO COMPLETADO EXITOSAMENTE
+================================================================================
+
+✅ Análisis estadístico completado exitosamente
+
+================================================================================
+🎉 ¡PROCESO COMPLETO FINALIZADO EXITOSAMENTE!
+================================================================================
+📁 Revisa las carpetas 'resultados/' y 'analisis/' para los resultados.
+📄 Lee 'conclusiones_finales.txt' para el resumen ejecutivo.
+📊 Examina los gráficos PNG para análisis visual.
+================================================================================
+
+================================================================================
+ANÁLISIS COMPLETO DE PARÁMETROS - ALGORITMO ABC
+Welded Beam Design Problem
+================================================================================

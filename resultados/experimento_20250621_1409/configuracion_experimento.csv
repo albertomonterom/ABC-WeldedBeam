@@ -1,0 +1,6 @@
+parametro,niveles
+numb_bees,"[50, 150]"
+max_itrs,"[100, 500]"
+p_f,"[0.25, 0.45]"
+limit,"[10, 50]"
+modification_rate,"[0.1, 0.5]"
